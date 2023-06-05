@@ -5,7 +5,10 @@ const router = require("./routes/router");
 const path = require('path')
 const cors = require('cors');
 
-app.use(cors());
+var corsOptions = {
+  origin: "https://crud-react-app-8hcv.onrender.com"
+}
+app.use(cors(corsOptions));
 
 app.disable("x-powered-by");
 app.use(express.json());
